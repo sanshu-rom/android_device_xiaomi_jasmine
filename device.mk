@@ -23,7 +23,7 @@
 
 # Inherit the fusion-common definitions
 $(call inherit-product, device/xiaomi/sdm660-common/platform.mk)
- 
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
@@ -71,8 +71,8 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 DEVICE_PATH := device/xiaomi/jasmine
- 
- # Overlays
+
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage
@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # Init
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
  	libinit_jasmine
 
 # Sensors
@@ -119,21 +119,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(DEVICE_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
-    
+
 # Lights
  PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_jasmine
 
 # Ramdisk
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     init.goodix.sh \
     init.device.rc
-    
+
 # Consumerir
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
-    
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
@@ -151,8 +151,8 @@ TARGET_SCREEN_WIDTH := 1080
 $(call inherit-product, vendor/xiaomi/jasmine/jasmine-vendor.mk)
 
 # Set those variables here to overwrite the inherited values.
- PRODUCT_NAME := lineage_jasmine
- PRODUCT_DEVICE := jasmine
- PRODUCT_MODEL := Mi A2 (AOSP)
- PRODUCT_BRAND := Xiaomi
- PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := lineage_jasmine
+PRODUCT_DEVICE := jasmine
+PRODUCT_MODEL := Mi A2 (AOSP)
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
