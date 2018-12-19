@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 CarbonROM
+# Copyright (C) 2018 LineageOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -149,10 +149,3 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Include Vendor files
 $(call inherit-product, vendor/xiaomi/jasmine/jasmine-vendor.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_jasmine
-PRODUCT_DEVICE := jasmine
-PRODUCT_MODEL := Mi A2 (AOSP)
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MANUFACTURER := Xiaomi
