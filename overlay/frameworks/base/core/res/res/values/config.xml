@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- #
-# Copyright (C) 2018 LineageOS
+# Copyright (C) 2018 CarbonROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
+	
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
@@ -46,24 +46,30 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
+		<item>1</item>
         <item>2</item>
-        <item>3</item>
         <item>4</item>
+        <item>5</item>
         <item>8</item>
-        <item>12</item>
-        <item>20</item>
-        <item>33</item>
-        <item>55</item>
-        <item>90</item>
-        <item>148</item>
-        <item>245</item>
-        <item>403</item>
-        <item>665</item>
-        <item>1097</item>
-        <item>1808</item>
-        <item>2981</item>
-        <item>5000</item>
+        <item>13</item>
+        <item>17</item>
+        <item>21</item>
+        <item>26</item>
+        <item>30</item>
+        <item>34</item>
+        <item>39</item>
+        <item>60</item>
+        <item>140</item>
+        <item>310</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+        <item>1000</item>
+        <item>1200</item>
+        <item>1500</item>
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -72,77 +78,32 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>10.45935</item>   <!-- 0-1 -->
-        <item>29.25559</item>   <!-- 1-2 -->
-        <item>34.240692</item>  <!-- 2-3 -->
-        <item>37.514347</item>  <!-- 3-4 -->
-        <item>40.018696</item>  <!-- 4-8 -->
-        <item>46.885098</item>  <!-- 8-12 -->
-        <item>51.626434</item>  <!-- 12-20 -->
-        <item>58.610405</item>  <!-- 20-33 -->
-        <item>66.890915</item>  <!-- 33-55 -->
-        <item>77.61644</item>   <!-- 55-90 -->
-        <item>90.221886</item>  <!-- 90-148 -->
-        <item>105.80314</item>  <!-- 148-245 -->
-        <item>126.073845</item> <!-- 245-403 -->
-        <item>154.16931</item>  <!-- 403-665 -->
-        <item>191.83717</item>  <!-- 665-1097 -->
-        <item>240.74442</item>  <!-- 1097-1808 -->
-        <item>294.84857</item>  <!-- 1808-2981 -->
-        <item>348.05453</item>  <!-- 2981-5000 -->
-        <item>389.70</item>  <!-- 5000+ -->
-    </integer-array>
-
-    <!-- An array describing the screen's backlight values corresponding to the brightness
-         values in the config_screenBrightnessNits array.
-         This array should be equal in size to config_screenBrightnessBacklight. -->
-    <integer-array name="config_screenBrightnessBacklight">
-        <item>0</item>
+		<item>2</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
         <item>15</item>
+        <item>17</item>
+        <item>24</item>
         <item>30</item>
+        <item>30</item>
+        <item>44</item>
         <item>45</item>
-        <item>60</item>
-        <item>75</item>
-        <item>90</item>
+        <item>48</item>
+        <item>55</item>
+        <item>64</item>
+        <item>66</item>
+        <item>69</item>
+        <item>84</item>
+        <item>93</item>
         <item>105</item>
-        <item>120</item>
-        <item>135</item>
-        <item>150</item>
-        <item>165</item>
-        <item>180</item>
-        <item>195</item>
-        <item>210</item>
-        <item>225</item>
+        <item>200</item>
         <item>240</item>
         <item>255</item>
     </integer-array>
-
-    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
-         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
-         should be measured with an all white image while the display is in the fully on state.
-         Note that this value should *not* reflect the maximum brightness value for any high
-         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
-         This array should be equal in size to config_screenBrightnessBacklight -->
-    <array name="config_screenBrightnessNits">
-        <item>0</item>
-        <item>26.11</item>
-        <item>50.5</item>
-        <item>74.17</item>
-        <item>96.89</item>
-        <item>118.3</item>
-        <item>139.8</item>
-        <item>162.9</item>
-        <item>189.8</item>
-        <item>217.4</item>
-        <item>240.4</item>
-        <item>265.3</item>
-        <item>288.7</item>
-        <item>316</item>
-        <item>340.8</item>
-        <item>357.9</item>
-        <item>376.2</item>
-        <item>392.9</item>
-    </array>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
@@ -157,7 +118,7 @@
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
-
+    
     <!-- Maximum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness higher this level. -->
     <integer name="config_screenBrightnessSettingMaximum">255</integer>
@@ -167,8 +128,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -201,7 +162,7 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>28</item>
     </integer-array>
-
+    
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
          If no value is found for the rat-name in use, the system default will be applied.
@@ -218,10 +179,11 @@
         <item>evdo:131072,262144,1048576,4096,16384,524288</item>
         <item>lte:524288,1048576,8388608,262144,524288,4194304</item>
     </string-array>
-
+    
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,8388608,262144,524288,4194304</string>
+
 
     <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
@@ -245,12 +207,10 @@
         <item>bluetooth,7,7,2,-1,true</item>
         <item>ethernet,9,9,4,-1,true</item>
     </string-array>
-
     <!-- Number of physical SIM slots on the device. This includes both eSIM and pSIM slots, and
          is not necessarily the same as the number of phones/logical modems supported by the device.
          For example, a multi-sim device can have 2 phones/logical modems, but 3 physical slots,
          or a single SIM device can have 1 phones/logical modems, but 2 physical slots (one eSIM
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
-
 </resources>
