@@ -60,14 +60,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.multisim.config=dsds
 
-# LCD
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=480
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
-	mm.enable.qcom_parser=262029
+	vendor.mm.enable.qcom_parser=262029
 
 # Paper mode
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -79,7 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.data.iwlan.enable=true \
+	persist.vendor.data.iwlan.enable=true \
 	persist.vendor.radio.data_con_rprt=1
 
 # Vibration
