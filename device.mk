@@ -107,10 +107,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(DEVICE_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-# Init
-PRODUCT_PACKAGES += \
- 	libinit_jasmine
-
 # Sensors
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
