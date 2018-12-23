@@ -36,8 +36,8 @@ PRODUCT_MODEL := Mi A2
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="jasmine" \
     PRODUCT_NAME="jasmine" \
-    PRIVATE_BUILD_DESC="jasmine-user 8.1.0 OPM1.171019.011 V9.6.16.0.ODIMIFE release-keys"
+    PRIVATE_BUILD_DESC="jasmine_sprout-user 9 PKQ1.180904.001 V10.0.2.0.PDIMIFJ release-keys"
 
-BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:8.1.0/OPM1.171019.011/V9.6.16.0.ODIMIFE:user/release-keys"
+BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.2.0.PDIMIFJ:user/release-keys"
 
 TARGET_VENDOR_PRODUCT_NAME := jasmine
