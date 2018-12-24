@@ -74,7 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.vendor.data.iwlan.enable=true \
+	persist.vendor.iwlan.enable=true \
 	persist.vendor.radio.data_con_rprt=1
 
 # Vibration
