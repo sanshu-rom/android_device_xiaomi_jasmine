@@ -47,7 +47,7 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-09-01
+VENDOR_SECURITY_PATCH := 2018-12-05
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
