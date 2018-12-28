@@ -22,12 +22,12 @@
 #
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
 
 # Inherit from jasmine device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := lineage_jasmine
+PRODUCT_NAME := xenonhd_jasmine
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := jasmine
 PRODUCT_MANUFACTURER := Xiaomi
@@ -39,5 +39,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="jasmine_sprout-user 9 PKQ1.180904.001 V10.0.2.0.PDIMIFJ release-keys"
 
 BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.2.0.PDIMIFJ:user/release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.xenonhd.maintainer=Stanislav Bukovetskiy
 
 TARGET_VENDOR_PRODUCT_NAME := jasmine
